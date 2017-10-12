@@ -1,0 +1,21 @@
+18:43:52 **** Auto Build of configuration Debug for project linux_cross_compile ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: linux_cross_compile.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++  -o "linux_cross_compile.elf"  ./src/main.o   
+Finished building target: linux_cross_compile.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size linux_cross_compile.elf  |tee "linux_cross_compile.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5008	    400	    148	   5556	   15b4	linux_cross_compile.elf
+Finished building: linux_cross_compile.elf.size
+ 
+
+18:43:52 Build Finished (took 625ms)
+

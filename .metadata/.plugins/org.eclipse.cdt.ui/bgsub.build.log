@@ -1,0 +1,24 @@
+18:58:47 **** Auto Build of configuration Debug for project bgsub ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM g++ compiler
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bgsub_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc:28:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^
+Finished building: ../src/main.cc
+ 
+Building target: bgsub.elf
+Invoking: ARM g++ linker
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../bgsub_bsp/ps7_cortexa9_0/lib -o "bgsub.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: bgsub.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size bgsub.elf  |tee "bgsub.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 539796	 320596	  33128	 893520	  da250	bgsub.elf
+Finished building: bgsub.elf.size
+ 
+
+18:58:48 Build Finished (took 1s.321ms)
+

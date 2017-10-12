@@ -1,0 +1,21 @@
+00:55:24 **** Auto Build of configuration Debug for project test_linux ****
+make all 
+Building file: ../src/main.cc
+Invoking: ARM Linux g++ compiler
+arm-xilinx-linux-gnueabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: test_linux.elf
+Invoking: ARM Linux g++ linker
+arm-xilinx-linux-gnueabi-g++  -o "test_linux.elf"  ./src/main.o ./src/xdocnn.o   
+Finished building target: test_linux.elf
+ 
+Invoking: ARM Linux Print Size
+arm-xilinx-linux-gnueabi-size test_linux.elf  |tee "test_linux.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4606	    324	      8	   4938	   134a	test_linux.elf
+Finished building: test_linux.elf.size
+ 
+
+00:55:24 Build Finished (took 422ms)
+
